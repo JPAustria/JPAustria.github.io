@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Finalizer — Offline Release Checks & Playback for macOS</title>
+
+  <meta
+    name="description"
+    content="Finalizer is a macOS audio tool for project-based offline release analysis, playback while analysis runs, target profiles, source vs processed comparison, MasterDeliveryCheck results, reports, and delivery confidence."
+  />
+
+  <meta name="theme-color" content="#24282d" />
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon/icon_32x32.png?v=4">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icon/icon_180x180.png?v=4">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Finalizer home">
+        <img
+          class="brand-icon"
+          src="assets/icon/finalizer.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <span>Finalizer</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#workflow">Workflow</a>
+        <a href="#analysis">Analyze</a>
+        <a href="#player">Player</a>
+        <a href="#masterchain">Master Chain</a>
+        <a href="#meters">Meters</a>
+        <a href="#report">Report</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero scene">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            macOS audio delivery tool
+          </p>
+
+          <h1>From project to report.</h1>
+
+          <p class="lead">
+            <strong>Finalizer</strong> checks a planned release as a project. Choose a
+            target profile, import tracks, run offline analysis, and listen while it works.
+            When analysis is ready, MasterDeliveryCheck shows what passed, what failed,
+            and how the release translates to other delivery targets.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#workflow">See the workflow</a>
+            <a class="button secondary" href="#report">See the outcome</a>
+          </div>
+
+          <p class="small-note">
+            Offline analysis is the release check. Playback stays available because meters
+            help, but ears decide.
+          </p>
+        </div>
+
+        <div class="hero-visual" aria-label="Finalizer project and player preview">
+          <div class="workflow-showcase">
+            <figure class="workflow-shot project-shot">
+              <img
+                src="assets/screenshots/project-light.png"
+                alt="Finalizer Project view with offline analysis results."
+              />
+              <figcaption>Project · target analysis</figcaption>
+            </figure>
+
+            <figure class="workflow-shot player-shot">
+              <img
+                src="assets/screenshots/mainplayer-light.png"
+                alt="Finalizer main Player view with playlist and live LED meter."
+              />
+              <figcaption>Player · listen while analyzing</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow" class="section alt scene">
+      <div class="wrap split-scene">
+        <div class="scene-copy">
+          <p class="section-label">Project workflow</p>
+          <h2>Open the app. Create a project. Choose a target.</h2>
+          <p>
+            Finalizer starts with the release context. Create a project, select a profile
+            such as Streaming / Apple Music, import the planned tracks, and run analysis.
+          </p>
+
+          <div class="scene-steps">
+            <article class="scene-step">
+              <span>01</span>
+              <div>
+                <h3>Create a Project</h3>
+                <p>Use Projects as the release workspace instead of checking loose files by hand.</p>
+              </div>
+            </article>
+
+            <article class="scene-step">
+              <span>02</span>
+              <div>
+                <h3>Select a target profile</h3>
+                <p>Choose the intended delivery target, for example Streaming / Apple Music.</p>
+              </div>
+            </article>
+
+            <article class="scene-step">
+              <span>03</span>
+              <div>
+                <h3>Import tracks</h3>
+                <p>Add the songs planned for the release and keep them together in one project.</p>
+              </div>
+            </article>
+
+            <article class="scene-step">
+              <span>04</span>
+              <div>
+                <h3>Run Analyze</h3>
+                <p>Finalizer runs the offline delivery checks while playback stays available.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <figure class="large-screenshot">
+          <div class="inside-image">
+            <img
+              src="assets/screenshots/project-light.png"
+              alt="Finalizer Project view with target profile and offline analysis results."
+            />
+          </div>
+          <figcaption>Project workspace · release context first</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="analysis" class="section scene">
+      <div class="wrap split-scene">
+        <div class="scene-copy">
+          <p class="section-label">Offline analysis</p>
+          <h2>The technical check runs faster than listening.</h2>
+          <p>
+            Offline analysis checks the release against the selected profile and collects
+            the measured results per track while playback stays available.
+          </p>
+
+          <div class="scene-steps">
+            <article class="scene-step">
+              <span>01</span>
+              <div>
+                <h3>Target checks</h3>
+                <p>Check the track against the selected profile instead of guessing.</p>
+              </div>
+            </article>
+
+            <article class="scene-step">
+              <span>02</span>
+              <div>
+                <h3>Track results</h3>
+                <p>Review the planned release as a project, not as scattered files.</p>
+              </div>
+            </article>
+
+            <article class="scene-step">
+              <span>03</span>
+              <div>
+                <h3>Listen while it runs</h3>
+                <p>Use the Player while offline checks continue in the background.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <figure class="large-screenshot">
+          <div class="inside-image report-preview-image">
+            <img
+              src="assets/screenshots/analyze-window.png"
+              alt="Finalizer Analyze window showing offline checks running and completed files."
+            />
+          </div>
+          <figcaption>Analyze Window · offline checks running</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="player" class="section alt scene">
+      <div class="wrap carousel-scene">
+        <div class="section-head center">
+          <p class="section-label">Player</p>
+          <h2>Playback stays close to the release check.</h2>
+          <p>
+            The Player is the listening side of Finalizer. Main Player, External Player
+            Window, Mini Player, and Embedded Player keep listening available while the
+            release check runs.
+          </p>
+        </div>
+
+        <div class="screenshot-carousel" data-carousel="player">
+          <div class="carousel-track">
+            <article class="carousel-slide is-active" data-slide>
+              <figure class="carousel-shot">
+                <div class="inside-image">
+                  <img
+                    src="assets/screenshots/mainplayer-light.png"
+                    alt="Finalizer main Player view with playlist and live LED meter."
+                  />
+                </div>
+                <figcaption>
+                  <strong>Main Player</strong>
+                  <span>Full Player view inside the app with playlist playback and the live Target/Profile LED Meter.</span>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="carousel-slide" data-slide>
+              <figure class="carousel-shot">
+                <div class="inside-image">
+                  <img
+                    src="assets/screenshots/player-light.png"
+                    alt="Finalizer external Player window with live LED meter."
+                  />
+                </div>
+                <figcaption>
+                  <strong>External Player Window</strong>
+                  <span>Open playback as its own window when you want the custom Target/Profile LED Meter outside the main layout.</span>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="carousel-slide" data-slide>
+              <figure class="carousel-shot">
+                <div class="inside-image">
+                  <img
+                    src="assets/screenshots/miniplayer-light.png"
+                    alt="Finalizer Mini Player with compact playback controls."
+                  />
+                </div>
+                <figcaption>
+                  <strong>Mini Player</strong>
+                  <span>Compact playback controls without the LED Meter for simple listening or keeping playback small.</span>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="carousel-slide" data-slide>
+              <figure class="carousel-shot">
+                <div class="inside-image">
+                  <img
+                    src="assets/screenshots/playeremb-light.png"
+                    alt="Finalizer embedded Mini Player inside Project view."
+                  />
+                </div>
+                <figcaption>
+                  <strong>Embedded Player</strong>
+                  <span>The small Player embedded in Project view while offline analysis and release checks are running.</span>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+
+          <div class="carousel-dots" aria-label="Player screenshots">
+            <button class="carousel-dot is-active" type="button" data-slide-to="0" aria-label="Show Main Player"></button>
+            <button class="carousel-dot" type="button" data-slide-to="1" aria-label="Show External Player Window"></button>
+            <button class="carousel-dot" type="button" data-slide-to="2" aria-label="Show Mini Player"></button>
+            <button class="carousel-dot" type="button" data-slide-to="3" aria-label="Show Embedded Player"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="delivery" class="section scene">
+      <div class="wrap outcome-scene">
+        <div class="section-head center">
+          <p class="section-label">MasterDeliveryCheck</p>
+          <h2>See the selected target — and the other outcomes.</h2>
+          <p>
+            When offline analysis is ready, MasterDeliveryCheck shows the selected target
+            result first. It can also show how the same track would translate to other
+            target families such as CD, vinyl, or TV.
+          </p>
+        </div>
+
+        <div class="outcome-grid">
+          <article class="outcome-card">
+            <span>Target</span>
+            <h3>Selected target</h3>
+            <p>
+              See whether the planned release passes the profile you actually selected
+              for the project.
+            </p>
+          </article>
+
+          <article class="outcome-card">
+            <span>Translate</span>
+            <h3>Other delivery families</h3>
+            <p>
+              Compare the result against other target options to understand where the
+              same master may or may not fit.
+            </p>
+          </article>
+
+          <article class="outcome-card">
+            <span>Result</span>
+            <h3>Clear outcome</h3>
+            <p>
+              Get a pass/fail style result with practical suggestions when the file does
+              not reach the selected target.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="masterchain" class="section alt scene masterchain-story">
+      <div class="wrap paired-story">
+        <article class="story-pair is-active" data-story-step="0">
+          <div class="story-panel">
+            <p class="section-label">Master Chain</p>
+            <h2>Preview changes before you decide what to do next.</h2>
+            <p>
+              If a track fails the target, use the Master Chain to load or simulate
+              processing changes and compare Source against Processed.
+            </p>
+          </div>
+
+          <figure class="story-shot is-active" data-story-image="0">
+            <div class="inside-image inside-image-tall">
+              <img
+                src="assets/screenshots/masterchain-light.png"
+                alt="Finalizer Master Chain showing Source and Processed comparison."
+              />
+            </div>
+            <figcaption>Source vs Processed</figcaption>
+          </figure>
+        </article>
+
+        <article class="story-pair" data-story-step="1">
+          <div class="story-panel">
+            <p class="section-label">BasicEQ</p>
+            <h2>Start from a neutral state.</h2>
+            <p>
+              Use the chain as a preview area before deciding what the file needs.
+              The goal is not to guess — it is to hear and check the result.
+            </p>
+          </div>
+
+          <figure class="story-shot" data-story-image="1">
+            <div class="inside-image">
+              <img
+                src="assets/screenshots/basiceq-light.png"
+                alt="Finalizer BasicEQ flat state before adjustment."
+              />
+            </div>
+            <figcaption>BasicEQ · flat preview</figcaption>
+          </figure>
+        </article>
+
+        <article class="story-pair" data-story-step="2">
+          <div class="story-panel">
+            <p class="section-label">Adjustment preview</p>
+            <h2>See what a move could change.</h2>
+            <p>
+              Preview how an EQ move, a few dB, or a mastering AU plugin could affect
+              the signal before revising the master or sending notes forward.
+            </p>
+            <p>
+              Saving chain setups is planned later.
+            </p>
+          </div>
+
+          <figure class="story-shot" data-story-image="2">
+            <div class="inside-image">
+              <img
+                src="assets/screenshots/basiceqmodi-light.png"
+                alt="Finalizer BasicEQ adjusted state showing an EQ change preview."
+              />
+            </div>
+            <figcaption>BasicEQ · adjustment preview</figcaption>
+          </figure>
+        </article>
+
+        <div class="story-dots" aria-label="Master Chain preview steps">
+          <button class="story-dot is-active" type="button" data-story-to="0" aria-label="Show Source vs Processed"></button>
+          <button class="story-dot" type="button" data-story-to="1" aria-label="Show BasicEQ flat preview"></button>
+          <button class="story-dot" type="button" data-story-to="2" aria-label="Show BasicEQ adjustment preview"></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="meters" class="section scene">
+      <div class="wrap carousel-scene">
+        <div class="section-head center">
+          <p class="section-label">Meters</p>
+          <h2>Meters show why a target passes or fails.</h2>
+          <p>
+            Finalizer uses target LEDs, EBU R128 style loudness views, peak, true peak,
+            stereo, low-end mono behavior, and clip state to make the technical state
+            visible. The final decision still belongs to the listener.
+          </p>
+        </div>
+
+        <div class="screenshot-carousel compact" data-carousel="meters">
+          <div class="carousel-track">
+            <article class="carousel-slide is-active" data-slide>
+              <figure class="carousel-shot">
+                <div class="meter-pair">
+                  <figure class="meter-shot meter-shot-dark">
+                    <img
+                      src="assets/screenshots/mastermeter-dark.png"
+                      alt="Finalizer Master Meter in dark mode showing peak, true peak, RMS, LUFS, stereo, low-end mono and clip state."
+                    />
+                    <figcaption>Master Meter · dark</figcaption>
+                  </figure>
+
+                  <figure class="meter-shot meter-shot-light">
+                    <img
+                      src="assets/screenshots/mastermeter-light.png"
+                      alt="Finalizer Master Meter in light mode showing peak, true peak, RMS, LUFS, stereo, low-end mono and clip state."
+                    />
+                    <figcaption>Master Meter · light</figcaption>
+                  </figure>
+                </div>
+                <figcaption>
+                  <strong>Master Meter</strong>
+                  <span>Peak, true peak, RMS, LUFS, stereo, low-end mono, and clip state.</span>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="carousel-slide" data-slide>
+              <figure class="carousel-shot">
+                <div class="inside-image">
+                  <img
+                    src="assets/screenshots/ebumeter-light.png"
+                    alt="Finalizer EBU R128 Meter showing integrated loudness, short-term loudness, LRA, and true peak."
+                  />
+                </div>
+                <figcaption>
+                  <strong>EBU R128 Meter</strong>
+                  <span>See loudness, LRA, true peak, and target tolerance in a dedicated meter view.</span>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="carousel-slide" data-slide>
+              <figure class="carousel-shot">
+                <div class="inside-image">
+                  <img
+                    src="assets/screenshots/atscmeter-light.png"
+                    alt="Finalizer ATSC A/85 Meter showing live LKFS target comparison, LRA, and true peak."
+                  />
+                </div>
+                <figcaption>
+                  <strong>ATSC A/85 Meter</strong>
+                  <span>Check LKFS against ATSC-style broadcast targets with loudness, LRA, and true peak feedback.</span>
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="carousel-slide" data-slide>
+              <figure class="carousel-shot">
+                <div class="inside-image">
+                  <img
+                    src="assets/screenshots/ledmeter-light.png"
+                    alt="Finalizer LED Meter showing realtime peak, RMS, and hold values for left and right channels."
+                  />
+                </div>
+                <figcaption>
+                  <strong>LED Meter</strong>
+                  <span>Watch realtime peak, RMS, and hold behavior while playback runs.</span>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+
+          <div class="carousel-dots" aria-label="Meter screenshots">
+            <button class="carousel-dot is-active" type="button" data-slide-to="0" aria-label="Show Master Meter"></button>
+            <button class="carousel-dot" type="button" data-slide-to="1" aria-label="Show EBU R128 Meter"></button>
+            <button class="carousel-dot" type="button" data-slide-to="2" aria-label="Show ATSC A/85 Meter"></button>
+            <button class="carousel-dot" type="button" data-slide-to="3" aria-label="Show LED Meter"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="report" class="section alt scene">
+      <div class="wrap split-scene">
+        <div class="scene-copy">
+          <p class="section-label">Finalizer Report</p>
+          <h2>End with a result you can read, save, or send.</h2>
+          <p>
+            Finalizer can create a report as text or PDF. It shows whether the release
+            passed, lists warnings per track, and keeps the delivery result documented.
+          </p>
+
+          <div class="scene-steps">
+            <article class="scene-step">
+              <span>✓</span>
+              <div>
+                <h3>Passed</h3>
+                <p>The file fits the selected target profile.</p>
+              </div>
+            </article>
+
+            <article class="scene-step">
+              <span>!</span>
+              <div>
+                <h3>Needs attention</h3>
+                <p>Finalizer points to the values that prevent the file from passing.</p>
+              </div>
+            </article>
+
+            <article class="scene-step">
+              <span>dB</span>
+              <div>
+                <h3>Suggested changes</h3>
+                <p>Reports can suggest practical gain changes to move closer to the target.</p>
+              </div>
+            </article>
+
+            <article class="scene-step">
+              <span>PDF</span>
+              <div>
+                <h3>Text or PDF</h3>
+                <p>Keep the result for your archive, a client, a label, or mastering notes.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <figure class="large-screenshot">
+          <div class="inside-image report-preview-image">
+            <img
+              src="assets/screenshots/exportpdf.png"
+              alt="Finalizer PDF report preview with track results and warnings."
+            />
+          </div>
+          <figcaption>PDF Report · delivery proof</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="pricing" class="section scene">
+      <div class="wrap pricing-scene">
+        <div class="section-head center">
+          <p class="section-label">Pricing</p>
+          <h2>No subscription trap.</h2>
+          <p>
+            Finalizer is planned as a one-time Mac App Store purchase.
+          </p>
+        </div>
+
+        <div class="price-grid">
+          <article class="price-card">
+            <h3>Player</h3>
+            <p class="price">€1</p>
+            <p>
+              A small entry version for playback and basic release confidence.
+            </p>
+          </article>
+
+          <article class="price-card featured">
+            <div class="badge">Planned</div>
+            <h3>Professional</h3>
+            <p class="price">€99</p>
+            <p>
+              Full project workflow with offline analysis, target profiles,
+              MasterDeliveryCheck, playback, Source vs Processed comparison, meters,
+              reports, and export control.
+            </p>
+          </article>
+        </div>
+
+        <div class="cta-card final-cta">
+          <p class="section-label">Coming soon</p>
+          <h2>Finalizer is in active development.</h2>
+          <p>
+            More screenshots, help pages, release notes, and the Mac App Store link will
+            be added here.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="mailto:support@finalizer.app>Contact</a>
+            <a class="button secondary" href="#top">Back to top</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="screenshot-lightbox" id="screenshot-lightbox" aria-label="Screenshot preview">
+    <div class="screenshot-lightbox-inner">
+      <div class="screenshot-lightbox-bar">
+        <span class="screenshot-lightbox-title" id="screenshot-lightbox-title">Screenshot</span>
+        <button class="screenshot-lightbox-close" type="button" aria-label="Close screenshot preview">×</button>
+      </div>
+
+      <figure class="screenshot-lightbox-figure">
+        <img class="screenshot-lightbox-image" src="" alt="" />
+        <figcaption class="screenshot-lightbox-caption"></figcaption>
+      </figure>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span> © 2026 Finalizer · Johannes Puntigam. All rights reserved.</span>
+      <span>  <a href="sites/impressum.html">Impressum</a></span>
+
+ <span> <a href="sites/privacy.html">Privacy</a></span>
+
+  <span><a href="sites/support.html">Support</a></span>
+      <span>macOS · offline analysis · playback · delivery control</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
